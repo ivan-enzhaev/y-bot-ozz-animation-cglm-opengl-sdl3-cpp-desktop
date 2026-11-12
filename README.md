@@ -1,0 +1,1 @@
+[Guide](https://ivan-enzhaev.github.io/tutorials/sdl3-opengl/desktop/playing-chicken-dance-animation-y-bot-ozz-animation-cglm-sdl3-desktop)
