@@ -37,7 +37,7 @@ else()
 endif()
 
 add_executable(app
-    src/main.cpp
+    main.cpp
     ${GLAD_SOURCE}
 )
 
@@ -59,8 +59,11 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/assets")
     )
 endif()
 
+target_link_options(app PRIVATE -s -static-libgcc -static-libstdc++)
+
 if(WIN32)
     target_compile_options(app PRIVATE -Os)
+    target_link_options(app PRIVATE -static)
 
     if(CMAKE_BUILD_TYPE STREQUAL "Debug")
         target_link_options(app PRIVATE -mconsole)
